@@ -1,6 +1,6 @@
 #!/bin/sh
 
-GAME_VERSION="1_11_2929_2"
+GAME_VERSION="1_11_2931_2"
 PKG_BASE_COMMIT="7cebdc80ca43aca55809475c58b19ce3215c1666"
 
 ROOT_DIR="$(dirname "$0")/.."
@@ -10,7 +10,7 @@ PKG_BUILD_DIR="${ROOT_DIR}/build"
 PKG_DIFF_DIR="${PKG_BUILD_DIR}/diff"
 PKG_BUNDLE_DIR="${PKG_BUILD_DIR}/GTS/${GAME_VERSION}_active"
 
-PKG_DATA_EXTENSIONS='\.xml$|\.cfg$|\.ddx$|\.tactics|\.vis$|\.ai$'
+PKG_DATA_EXTENSIONS='\.xml$|\.cfg$|\.ddx$|\.tactics|\.vis$|\.ai$|\.tfx$|\.pcss$'
 PKG_DATA_FILES=$(git diff --name-only HEAD ${PKG_BASE_COMMIT} | egrep ${PKG_DATA_EXTENSIONS})
 
 PKG_FILE_NAME="maethrillian.pkg"

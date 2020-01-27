@@ -84,7 +84,7 @@
 		<Anim>Attack</Anim>
 		<Weapon>Hammer</Weapon>
 		<FullBodyAttackAnim />
-		<Strafing turnRate="360" trackingSpeed="120" />
+		<Strafing turnRate="420" trackingSpeed="160" />
 	</Action>
 	<Action>
 		<Name>PersistentCollisionAttack</Name>
@@ -102,7 +102,7 @@
 		<ActionType>Gather</ActionType>
 		<Anim>Gather</Anim>
 		<Resource>Supplies</Resource>
-		<WorkRate>2.5999999</WorkRate>
+		<WorkRate>4</WorkRate>
 		<WorkRange>4</WorkRange>
 		<RestrictedAutoTarget>true</RestrictedAutoTarget>
 	</Action>
@@ -111,7 +111,7 @@
 		<ActionType>Gather</ActionType>
 		<Anim>Gather</Anim>
 		<Resource>Power</Resource>
-		<WorkRate>2.5999999</WorkRate>
+		<WorkRate>4</WorkRate>
 		<WorkRange>4</WorkRange>
 		<RestrictedAutoTarget>true</RestrictedAutoTarget>
 	</Action>
