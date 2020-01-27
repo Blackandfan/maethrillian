@@ -3,7 +3,7 @@
 	<Weapon>
 		<Name>InCoverSMG</Name>
 		<AttackRate>1</AttackRate>
-		<DamagePerSecond>105</DamagePerSecond>
+		<DamagePerSecond>115</DamagePerSecond>
 		<WeaponType>MediumArms</WeaponType>
 		<Projectile>fx_proj_herorifle_01</Projectile>
 		<ImpactEffect size="Medium">SmallBallisticImpact</ImpactEffect>
@@ -25,7 +25,7 @@
 	<Weapon>
 		<Name>SMG</Name>
 		<AttackRate>1</AttackRate>
-		<DamagePerSecond>100</DamagePerSecond>
+		<DamagePerSecond>115</DamagePerSecond>
 		<WeaponType>MediumArms</WeaponType>
 		<Projectile>fx_proj_herorifle_01</Projectile>
 		<ImpactEffect size="Medium">SmallBallisticImpact</ImpactEffect>
@@ -47,7 +47,7 @@
 	<Weapon>
 		<Name>GroundPound</Name>
 		<AttackRate>0.5</AttackRate>
-		<DamagePerSecond>2200</DamagePerSecond>
+		<DamagePerSecond>1000</DamagePerSecond>
 		<UseDPSasDPA />
 		<WeaponType>Hero</WeaponType>
 		<MaxRange>1.84500003</MaxRange>
@@ -145,7 +145,7 @@
 	<Action>
 		<Name>InCoverSMGAttackAction</Name>
 		<ActionType>RangedAttack</ActionType>
-		<Anim>LaserAttack</Anim>
+		<Anim>MagnumAttack</Anim>
 		<ReloadAnim>CombatIdle</ReloadAnim>
 		<Weapon>InCoverSMG</Weapon>
 		<FullBodyAttackAnim />
@@ -153,12 +153,13 @@
 	<Action>
 		<Name>SMGAttackAction</Name>
 		<ActionType>RangedAttack</ActionType>
-		<Anim>LaserAttack</Anim>
+		<Anim>MagnumAttack</Anim>
 		<MoveAnim>JogAttack</MoveAnim>
 		<ReloadAnim>CombatIdle</ReloadAnim>
 		<Weapon>SMG</Weapon>
 		<FullBodyAttackAnim />
 		<Strafing turnRate="180" trackingSpeed="60" />
+		<Fatality attacker="fatality_spartan02_v_arbiter_attacker_01" target="fatality_spartan02_v_arbiter_victim_01" cooldown="0" orientationOffset="180" maxPosOffset="12" lastUnitOnly="true">cov_inf_arbiter_01</Fatality>
 	</Action>
 	<Action>
 		<Name>GroundPoundAction</Name>

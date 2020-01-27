@@ -3,16 +3,16 @@
 	<Weapon>
 		<Name>Autocannon</Name>
 		<AttackRate>0.25</AttackRate>
-		<DamagePerSecond>225</DamagePerSecond>
-		<WeaponType>SmallArms</WeaponType>
+		<DamagePerSecond>200</DamagePerSecond>
+		<WeaponType>ArmorPiercing</WeaponType>
 		<Projectile>fx_proj_cannon_01</Projectile>
-		<ImpactEffect size="Small">MediumBallisticImpact</ImpactEffect>
+		<ImpactEffect size="medium">MediumBallisticImpact</ImpactEffect>
 		<MaxVelocityLead>25</MaxVelocityLead>
 		<MaxRange>100</MaxRange>
-		<Accuracy>0.100000001</Accuracy>
-		<MaxDeviation>1.5</MaxDeviation>
-		<MovingAccuracy>0.100000001</MovingAccuracy>
-		<MovingMaxDeviation>2</MovingMaxDeviation>
+		<Accuracy>1</Accuracy>
+		<MaxDeviation>1</MaxDeviation>
+		<MovingAccuracy>1</MovingAccuracy>
+		<MovingMaxDeviation>1</MovingMaxDeviation>
 		<EnableHeightBonusDamage />
 		<TargetPriority type="PaintTarget">10</TargetPriority>
 		<TargetPriority type="GroundVehicle">6</TargetPriority>
@@ -30,17 +30,21 @@
 	<Weapon>
 		<Name>Railgun</Name>
 		<AttackRate>3</AttackRate>
-		<DamagePerSecond>213</DamagePerSecond>
+		<DamagePerSecond>700</DamagePerSecond>
 		<WeaponType>TankExplosive</WeaponType>
 		<Projectile>fx_proj_gaussCannon_01</Projectile>
 		<ImpactEffect size="Medium">GaussImpact</ImpactEffect>
 		<MaxVelocityLead>25</MaxVelocityLead>
 		<MaxRange>100</MaxRange>
 		<Accuracy>1</Accuracy>
-		<MaxDeviation>7</MaxDeviation>
+		<MaxDeviation>1</MaxDeviation>
 		<MovingAccuracy>1</MovingAccuracy>
-		<MovingMaxDeviation>10</MovingMaxDeviation>
-		<TargetPriority type="Flying">-1</TargetPriority>
+		<MovingMaxDeviation>1</MovingMaxDeviation>
+		<TargetPriority type="PaintTarget">10</TargetPriority>
+		<TargetPriority type="GroundVehicle">6</TargetPriority>
+		<TargetPriority type="Infantry">5</TargetPriority>
+		<TargetPriority type="Flying">4</TargetPriority>
+		<TargetPriority type="Building">3</TargetPriority>
 		<EnableHeightBonusDamage />
 		<AOEData>
 			<Hitbox>
@@ -53,7 +57,7 @@
 			<Hitbox>
 				<Type>Circle</Type>
 				<Radius>8</Radius>
-				<DamageRatio>40</DamageRatio>
+				<DamageRatio>50</DamageRatio>
 				<Origin>Target</Origin>
 				<FriendlyFire>false</FriendlyFire>
 			</Hitbox>
@@ -74,7 +78,7 @@
 	<Weapon>
 		<Name>StompWeapon</Name>
 		<AttackRate>1</AttackRate>
-		<DamagePerSecond>4600</DamagePerSecond>
+		<DamagePerSecond>9000</DamagePerSecond>
 		<UseDPSasDPA />
 		<WeaponType>Stomp</WeaponType>
 		<MaxRange>4</MaxRange>
@@ -125,7 +129,7 @@
 	<Weapon>
 		<Name>SelfStompWeapon</Name>
 		<AttackRate>1</AttackRate>
-		<DamagePerSecond>4600</DamagePerSecond>
+		<DamagePerSecond>9000</DamagePerSecond>
 		<UseDPSasDPA />
 		<WeaponType>Stomp</WeaponType>
 		<MaxRange>4</MaxRange>
@@ -173,6 +177,36 @@
 		<Daze TargetType="Military" MovementModifier="0" AOEEffect="true" SmartTargeting="false" AffectsBuildings="true">4.0f</Daze>
 		<AlwaysReplaceTargetWithItsPosition />
 	</Weapon>
+	<Weapon>
+		<Name>StompAttackWeapon</Name>
+		<AttackRate>0.100000001</AttackRate>
+		<DamagePerSecond>200</DamagePerSecond>
+		<WeaponType>Basic</WeaponType>
+		<UseDPSasDPA />
+		<ImpactEffect size="Medium">ScarabStomp</ImpactEffect>
+		<AOEData>
+			<Hitbox>
+				<Type>Circle</Type>
+				<Radius>12</Radius>
+				<DamageRatio>50</DamageRatio>
+				<Origin>Target</Origin>
+				<FriendlyFire>false</FriendlyFire>
+				<TargetType>NonFlying</TargetType>
+			</Hitbox>
+		</AOEData>
+		<ThrowUnits />
+		<ThrowDamageParts />
+		<PhysicsLaunchAngleMin>5</PhysicsLaunchAngleMin>
+		<PhysicsLaunchAngleMax>15</PhysicsLaunchAngleMax>
+		<PhysicsForceMin>600</PhysicsForceMin>
+		<PhysicsForceMax>900</PhysicsForceMax>
+	</Weapon>
+	<Action>
+		<Name>StompAttack</Name>
+		<ActionType>CollisionAttack</ActionType>
+		<Weapon>StompAttackWeapon</Weapon>
+		<TrampleAttack />
+	</Action>
 	<Action>
 		<Name>RailgunAttackAction</Name>
 		<ActionType>RangedAttack</ActionType>
